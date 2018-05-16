@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="cn.wanda.mapper.ScoreVoMapper">
+
+    <!-- 定义一个resultMap，解决数据库列名和实体类字段不一致 -->
+    <resultMap type="cn.wanda.entity.ScoreVo" id="scoreResultMap">
+        <id column="id" property="id"/>
+
+        <result column="学号" property="studentId"/>
+        <result column="姓名" property="student.studentName"/>
+        <result column="年龄" property="student.age"/>
+        <result column="语文" property="chinese"/>
+        <result column="数学" property="math"/>
+        <result column="英语" property="english"/>
+    </resultMap>
+
+    <!-- 定义一个resultMap2，解决数据库列名和实体类字段不一致 -->
+    <resultMap type="cn.wanda.entity.ScoreVo" id="scoreResultMap2">
+        <id column="id" property="id"/>
+
+        <result column="stu_id" property="studentId"/>
+    </resultMap>
+
+    <!--查询所有的分数-->
+    <select id="findAllScore" resultMap="scoreResultMap">
+        SELECT tb_stu.stu_id as 学号,tb_stu.stu_name as 姓名,tb_stu.age as 年龄,tb_score.chinese as 语文,tb_score.math as 数学,tb_score.english as 英语
+        FROM tb_stu,tb_score
+        WHERE tb_stu.stu_id = tb_score.stu_id
+        ORDER BY tb_stu.stu_id
+    </select>
+
+    <!--按语文成绩排序-->
+    <select id="findScoreByChinese" resultMap="scoreResultMap">
+        SELECT tb_stu.stu_id as 学号,tb_stu.stu_name as 姓名,tb_stu.age as 年龄,tb_score.chinese as 语文,tb_score.math as 数学,tb_score.english as 英语
+        FROM tb_stu,tb_score
+        WHERE tb_stu.stu_id = tb_score.stu_id
+        ORDER BY chinese DESC
+    </select>
+
+    <!--语文成绩70分以上-->
+    <select id="chineseUp" resultMap="scoreResultMap">
+        SELECT tb_stu.stu_id as 学号,tb_stu.stu_name as 姓名,tb_stu.age as 年龄,tb_score.chinese as 语文,tb_score.math as 数学,tb_score.english as 英语
+        FROM tb_stu,tb_score
+        WHERE tb_stu.stu_id = tb_score.stu_id
+        AND tb_score.chinese > 70
+    </select>
+
+    <!-- 语文成绩的平均分 -->
+    <select id="chineseAvg" resultType="int">
+        SELECT AVG(tb_score.chinese) FROM tb_score
+    </select>
+
+    <!-- 根据id查询分数 -->
+    <select id="findScoreById" parameterType="string" resultMap="scoreResultMap2">
+        SELECT /*tb_score.stu_id,tb_score.chinese,tb_score.math,tb_score.english*/ *
+        FROM tb_score
+        WHERE tb_score.stu_id = '${studentId}'
+    </select>
+
+    <!-- 更新分数 -->
+    <update id="updateScore" parameterType="cn.wanda.entity.ScoreVo">
+        UPDATE tb_score SET chinese = #{chinese},math = #{math},english = #{english} WHERE tb_score.stu_id = '${studentId}'
+    </update>
+
+    <!-- 根据范围查找 -->
+    <select id="findScoreByRange" parameterType="int" resultMap="scoreResultMap">
+        SELECT tb_stu.stu_id as 学号,tb_stu.stu_name as 姓名,tb_stu.age as 年龄,tb_score.chinese as 语文,tb_score.math as 数学,tb_score.english as 英语
+        FROM tb_stu,tb_score
+        WHERE tb_stu.stu_id = tb_score.stu_id
+        AND tb_score.chinese BETWEEN #{min} AND #{max}
+        ORDER BY tb_stu.stu_id
+    </select>
+
+</mapper>

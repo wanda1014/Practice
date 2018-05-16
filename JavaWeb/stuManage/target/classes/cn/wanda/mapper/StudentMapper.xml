@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="cn.wanda.mapper.StudentMapper">
+
+    <!-- 定义一个resultMap，解决数据库列名和实体类字段不一致 -->
+    <resultMap type="cn.wanda.entity.Student" id="studentMap">
+        <id column="stu_id" property="studentId"/>
+
+        <result column="stu_name" property="studentName"/>
+    </resultMap>
+
+    <!--查询所有的学生-->
+    <select id="findStudent" parameterType="string" resultMap="studentMap">
+      SELECT * FROM tb_stu where tb_stu.stu_id like '%${studentId}%' ORDER BY tb_stu.stu_id
+    </select>
+
+    <!-- 添加学生 -->
+    <insert id="addStudent" parameterType="student">
+        insert into tb_stu values ('${studentId}','${studentName}',#{age})
+    </insert>
+
+    <!--根据Id查询学生-->
+    <select id="findById" parameterType="string" resultMap="studentMap">
+      SELECT * FROM tb_stu where tb_stu.stu_id = '${studentId}'
+    </select>
+
+    <!-- 更新学生信息 -->
+    <update id="update" parameterType="student">
+        UPDATE tb_stu SET stu_name = '${studentName}',age = #{age} WHERE tb_stu.stu_id = '${studentId}'
+    </update>
+
+    <!-- 根据id删除学生 -->
+    <delete id="delete" parameterType="string">
+        DELETE FROM tb_stu  WHERE tb_stu.stu_id = '${studentId}'
+    </delete>
+
+</mapper>
