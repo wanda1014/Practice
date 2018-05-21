@@ -1,5 +1,10 @@
 # Practice
-Practice of Java from the beginning to the mastery
+
+* 存放实习期间的一切工作内容
+
+## calculator 文件夹
+
+* HTML + CSS + JavaScript 实现计算器
 
 ## practice文件夹
 
