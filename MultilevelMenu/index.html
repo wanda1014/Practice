@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Multilevel menu</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="mystyle.css" rel="stylesheet">  
+
+  </head>
+
+  <body>
+  
+    <div class="container">
+
+        <nav class="navbar navbar-default navbar-inverse">
+            <div class="container-fluid">
+
+              
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-education" aria-hidden="true"> XXX学习网</span></a>
+              </div>
+          
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li><a href="#">免费课程</a></li>
+                  <li><a href="#">职业路径</a></li>
+                  <li><a href="#">实战</a></li>
+                  <li><a href="#">猿问</a></li>
+                  <li><a href="#">手记</a></li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                  </div>
+                  <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                </form>
+                <form class="navbar-form navbar-left">
+                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"> 购物车</span></button>
+                  </form>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#">下载APP</a></li>
+                  <li><a href="#">登录</a></li>
+                  <li><a href="#">注册</a></li>
+                </ul>
+              </div><!-- /.navbar-collapse -->
+
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid"> 
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">精品课程</a>
+                </div>
+            
+                <div class="collapse navbar-collapse navbar-inner" id="example-navbar-collapse">
+                    <ul id="myTab" class="nav navbar-nav nav-stacked">
+                        <li class="dropdown">
+                            <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">
+                                前端开发 <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                                <li><a href="#html" tabindex="-1" data-toggle="tab">HTML/CSS</a></li>
+                                <li><a href="#javaScript" tabindex="-1" data-toggle="tab">JavaScript</a></li>
+                                <li><a href="#jQuery" tabindex="-1" data-toggle="tab">jQuery</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#nodejs" tabindex="-1" data-toggle="tab">Node.js</a></li>
+                                <li><a href="#angularJS" tabindex="-1" data-toggle="tab">AngularJS</a></li>
+                                <li><a href="#bootstrap" tabindex="-1" data-toggle="tab">Bootstrap</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                后端开发 <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">C/C++</a></li>
+                                <li><a href="#">Java</a></li>
+                                <li><a href="#">Python</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">SpringBoot</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                移动开发 <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Android</a></li>
+                                <li><a href="#">iOS</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Unity 3D</a></li>
+                                <li><a href="#">Cocos2d-x</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                数据库 <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">MySQL</a></li>
+                                <li><a href="#">MongoDB</a></li>
+                                <li><a href="#">Oracle</a></li>
+                                <li><a href="#">SQL Server</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                云计算&大数据 <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">大数据</a></li>
+                                <li><a href="#">云计算</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                运维&测试 <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">测试</a></li>
+                                <li><a href="#">Linux</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                UI设计 <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">动效动画</a></li>
+                                <li><a href="#">APPUI设计</a></li>
+                                <li><a href="#">设计工具</a></li>
+                                <li><a href="#">设计基础</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="myTabContent" class="tab-content">
+
+            <div class="tab-pane fade" id="html">
+
+              <!-- 顶部介绍 -->
+              <div class="header-wrap header-top" style="background: #2b333b url(images/591e99ee000109a208000480.jpg) center center;background-size: cover;">
+                  <div class="header-box clearfix">
+                      <h2 class="text-center">HTML/CSS入门到精通，成就你前端大神之路</h2>
+                  </div>
+              </div>
+              <!-- 顶部介绍end -->
+              <div>
+                  <h3><p class="text-center">第一步 HTML/CSS入门必学</p></h3>
+              </div>
+              <div>
+                  <h3><p class="text-center">第二步 HTML/CSS基础教学</p></h3>
+              </div>
+              <div>
+                  <h3><p class="text-center">第三步 HTML/CSS进阶</p></h3>
+              </div>
+                
+            </div>
+
+            <div class="tab-pane fade" id="javaScript">
+                <div class="row">
+                  <div class="col-md-3"><a href="#"><img src="images/JavaScript高级程序设计.png" alt="JavaScript高级程序设计"></a></div>
+                  <div class="col-md-3"><a href="#"><img src="images/JavaScript高级程序设计.png" alt="JavaScript高级程序设计"></a></div>
+                  <div class="col-md-3"><a href="#"><img src="images/JavaScript高级程序设计.png" alt="JavaScript高级程序设计"></a></div>
+                  <div class="col-md-3"><a href="#"><img src="images/JavaScript高级程序设计.png" alt="JavaScript高级程序设计"></a></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"><a href="#"><img src="images/JavaScript权威指南.png" alt="JavaScript权威指南"></a></div>
+                    <div class="col-md-3"><a href="#"><img src="images/JavaScript权威指南.png" alt="JavaScript权威指南"></a></div>
+                    <div class="col-md-3"><a href="#"><img src="images/JavaScript权威指南.png" alt="JavaScript权威指南"></a></div>
+                    <div class="col-md-3"><a href="#"><img src="images/JavaScript权威指南.png" alt="JavaScript权威指南"></a></div>
+                  </div>
+            </div>
+
+            <div class="tab-pane fade" id="jQuery">
+                <p>jQuery</p>
+            </div>
+
+            <div class="tab-pane fade" id="nodejs">
+                <p>nodejs</p>
+            </div>
+
+            <div class="tab-pane fade" id="angularJS">
+                <p>angularJS</p>
+            </div>
+            
+            <div class="tab-pane fade" id="bootstrap">
+                <p>bootstrap</p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script>    
+        $('li.dropdown').mouseover(function() {   
+             $(this).addClass('open');    }).mouseout(function() {        $(this).removeClass('open');    }); 
+        </script>
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+
+</html>
