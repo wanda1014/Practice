@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -5,18 +6,18 @@
 
 /*根据id的名称来控制样式和布局*/
 #calculator{
-    position: relative;
-    margin: 50px auto;
-    width: 260px;
-    height: 420px;
-    border: 1px solid gray;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
+    position: relative;                         /*定位计算器*/
+    margin: 50px auto;                          /*设置外边距，浏览器自动计算*/
+    width: 260px;                               /*宽度*/
+    height: 420px;                              /*长度*/
+    border: 1px solid gray;                   /*边框的样式：边宽、样式、颜色*/
+    -webkit-border-radius: 10px;                /*圆角属性  兼容苹果、谷歌等浏览器*/
+    -moz-border-radius: 10px;                   /*圆角属性  兼容火狐浏览器*/
     border-radius: 10px;
-    -webkit-box-shadow: 2px 2px 4px gray;
+    -webkit-box-shadow: 2px 2px 4px gray;     /*阴影效果*/
     -moz-box-shadow: 2px 2px 4px gray;
     box-shadow: 2px 2px 4px gray;
-    behavior:url("ie-css3.htc");  /*IE8-*/
+    behavior:url("ie-css3.htc");                /*IE8-*/
 }
 
 /*table表的样式*/
@@ -46,7 +47,7 @@ h3{
     behavior:url("ie-css3.htc");  /*IE8-*/
 }
 
-/*显示器的样式*/
+/*table里面input标签的样式*/
 #calculator_table td input{
     direction: rtl;
     font-size: 16px;
