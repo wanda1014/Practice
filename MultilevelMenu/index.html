@@ -84,12 +84,12 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <a href="#" id="myTabDrop2" class="dropdown-toggle" data-toggle="dropdown">
                                 后端开发 <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">C/C++</a></li>
-                                <li><a href="#">Java</a></li>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                                <li><a href="#C" tabindex="-1" data-toggle="tab">C/C++</a></li>
+                                <li><a href="#Java" tabindex="-1" data-toggle="tab">Java</a></li>
                                 <li><a href="#">Python</a></li>
                                 <li class="divider"></li>
                                 <li><a href="#">SpringBoot</a></li>
@@ -152,42 +152,71 @@
             </div>
         </nav>
 
+      <div class="carousel">
+                <div class="banner banner1">
+                    <a href="#"><img src="images/5afd579c0001528009360316.jpg" alt="Vue2.0"></a>
+                </div>
+                <div class="banner banner2">
+                    <a href="#"><img src="images/5ac356a6000166ec09360316.jpg" alt="mpvue小程序"></a>
+                </div>
+                <div class="banner banner3">
+                    <a href="#"><img src="images/5afabb4f00018fd009360316.jpg" alt="高并发"></a>
+                </div>
+                <div class="banner banner3">
+                    <a href="#"><img src="images/5ad9c34b0001056209360316.jpg" alt="SpringCloud"></a>
+                </div>	
+        </div>
+        
         <div id="myTabContent" class="tab-content">
 
             <div class="tab-pane fade" id="html">
-
-              <!-- 顶部介绍 -->
-              <div class="header-wrap header-top" style="background: #2b333b url(images/591e99ee000109a208000480.jpg) center center;background-size: cover;">
-                  <div class="header-box clearfix">
-                      <h2 class="text-center">HTML/CSS入门到精通，成就你前端大神之路</h2>
-                  </div>
-              </div>
-              <!-- 顶部介绍end -->
-              <div>
-                  <h3><p class="text-center">第一步 HTML/CSS入门必学</p></h3>
-              </div>
-              <div>
-                  <h3><p class="text-center">第二步 HTML/CSS基础教学</p></h3>
-              </div>
-              <div>
-                  <h3><p class="text-center">第三步 HTML/CSS进阶</p></h3>
-              </div>
-                
+                <h3>HTML/CSS学习</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/web前端入门.png" alt="web前端入门">
+                            <p>Web前端入门教程</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/CSS.png" alt="CSS项目实战">
+                            <p>CSS梅兰商城项目实战</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/h5.png" alt="H5+CSS3">
+                            <p>2018版Html+Css3由浅入深教程</p>
+                        </div>
+                    </div>
+                   
+                 </div>
             </div>
 
             <div class="tab-pane fade" id="javaScript">
+                <h3>JavaScript学习</h3>
                 <div class="row">
-                  <div class="col-md-3"><a href="#"><img src="images/JavaScript高级程序设计.png" alt="JavaScript高级程序设计"></a></div>
-                  <div class="col-md-3"><a href="#"><img src="images/JavaScript高级程序设计.png" alt="JavaScript高级程序设计"></a></div>
-                  <div class="col-md-3"><a href="#"><img src="images/JavaScript高级程序设计.png" alt="JavaScript高级程序设计"></a></div>
-                  <div class="col-md-3"><a href="#"><img src="images/JavaScript高级程序设计.png" alt="JavaScript高级程序设计"></a></div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/JavaScript基础.png" alt="JavaScript基础">
+                            <p>JavaScript基础教程</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/JavaScript基础加强.png" alt="JavaScript基础加强">
+                            <p>JavaScript基础加强</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/JavaScript高级.png" alt="JavaScript高级面对对象视频教程">
+                            <p>JavaScript高级面对对象视频教程</p>
+                        </div>
+                    </div>
+                    
                 </div>
-                <div class="row">
-                    <div class="col-md-3"><a href="#"><img src="images/JavaScript权威指南.png" alt="JavaScript权威指南"></a></div>
-                    <div class="col-md-3"><a href="#"><img src="images/JavaScript权威指南.png" alt="JavaScript权威指南"></a></div>
-                    <div class="col-md-3"><a href="#"><img src="images/JavaScript权威指南.png" alt="JavaScript权威指南"></a></div>
-                    <div class="col-md-3"><a href="#"><img src="images/JavaScript权威指南.png" alt="JavaScript权威指南"></a></div>
-                  </div>
             </div>
 
             <div class="tab-pane fade" id="jQuery">
@@ -206,15 +235,41 @@
                 <p>bootstrap</p>
             </div>
 
+            <div class="tab-pane fade" id="C">
+                <p>C</p>
+            </div>
+
+            <div class="tab-pane fade" id="Java">
+                <h3>Java学习</h3>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/Java快速入门.png" alt="Java快速入门">
+                            <p>Java快速入门教程</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/JavaWeb.png" alt="JavaWeb">
+                            <p>JavaWeb入门教程</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="images/网上商城.png" alt="JavaWeb网上商城实战视频教程">
+                            <p>JavaWeb网上商城实战视频教程</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
 
     </div>
 
-    <script>    
-        $('li.dropdown').mouseover(function() {   
-             $(this).addClass('open');    }).mouseout(function() {        $(this).removeClass('open');    }); 
-        </script>
+        <!--引入外部js文件(行为：即button产生的行为)-->
+        <script type="text/javascript" src="main.js"></script>
 
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>

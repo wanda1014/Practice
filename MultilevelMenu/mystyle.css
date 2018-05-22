@@ -11,3 +11,32 @@
     margin-top: 10px;
     margin-bottom: 0;
 }
+/*.dropdown{
+	width: 100px;
+	position: relative;
+}
+.dropdown-menu{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 100;
+}*/
+.carousel{
+    width: 936px;
+    height: 316px;
+    position: relative;
+    margin: 0 auto;
+}
+.banner{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+img{
+    width: 936px;
+    height: 316px;
+    border: 0;
+}
+h3{
+    text-align:center; 
+}
